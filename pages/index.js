@@ -1,18 +1,23 @@
-import Head from 'next/head';
-import styles from '../styles/Home.module.css';
+import Head from "next/head";
+import styles from "../styles/Home.module.css";
+
+import Link from "next/link";
+import Image from "next/image";
 
 export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
         <title>Create Next App</title>
+
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main>
         <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          Read <Link href="/posts/first-post">this page!</Link>
         </h1>
+        <Image src="/images/Loogie.jpg" height={180} width={144} alt="Loogie" />
 
         <p className={styles.description}>
           Get started by editing <code>pages/index.js</code>
@@ -55,7 +60,7 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{' '}
+          Powered by{" "}
           <img src="/vercel.svg" alt="Vercel" className={styles.logo} />
         </a>
       </footer>
@@ -111,5 +116,5 @@ export default function Home() {
         }
       `}</style>
     </div>
-  )
+  );
 }
